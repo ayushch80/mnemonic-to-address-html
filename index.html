@@ -8,7 +8,7 @@
   </head>
   <body>
      <form class="d-flex" id="mKey" method="POST">
-      <input class="form-control me-2" type="search" aria-label="Search" type="text" placeholder="Enter Private Key Here" id="searchMnem"/>
+      <input class="form-control me-2" type="search" aria-label="Search" type="text" placeholder="Enter Mnemonic Phrase Here" id="searchMnem"/>
       <button name="data" type="button" class="btn btn-primary" id="btn_click">Search</button>
      </form>
     <div id="wallet" class="alert alert-secondary"></div>
@@ -18,7 +18,7 @@
       function getData() {
         var m_Key = document.getElementById("mKey");
         var mnemonic = mKey.elements.namedItem("searchMnem").value;
-        var userAddress = new Wallet.fromMnemonic(mnemonic);
+        var userAddress = new Wallet.fromMnemonic('mnemonic');
         document.getElementById("wallet").innerText = "Address: " + userAddress.address;
       }
     </script>
