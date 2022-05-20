@@ -14,6 +14,7 @@
     <div id="wallet" class="alert alert-secondary"></div>
     <script type="module">
       import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
+      const { Wallet } = require('ethers');
       document.getElementById("btn_click").addEventListener("click", getData);
       function getData() {
         var m_Key = document.getElementById("mKey");
