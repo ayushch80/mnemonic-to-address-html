@@ -18,7 +18,7 @@
       function getData() {
         var m_Key = document.getElementById("mKey");
         var mnemonic = mKey.elements.namedItem("searchMnem").value;
-        var userAddress = new Wallet.fromMnemonic('mnemonic');
+        var userAddress = Wallet.fromMnemonic('mnemonic');
         document.getElementById("wallet").innerText = "Address: " + userAddress.address;
       }
     </script>
