@@ -14,11 +14,11 @@
     <div id="wallet" class="alert alert-secondary"></div>
     <script type="module">
       import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
-      document.querySelector('mKey').addEventListener('submit', (e) => {
+      document.getElementById("submit").addEventListener("click", getData);
+      function getData() {
       const mnemonic = new FormData('searchMnem');
       const addrs = ethers.Wallet.fromMnemonic(mnemonic)
-      document.getElementById("wallet").innerText = "Address: " + addrs.address;
-      })
+      document.getElementById("wallet").innerText = "Address: " + addrs.address;}
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
