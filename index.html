@@ -15,7 +15,7 @@
     <script type="module">
       import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
       const myMne = document.getElementById("mKey");
-      const mnemonic = myForm.elements.namedItem("searchMnem").value;
+      const mnemonic = myMne.elements.namedItem("searchMnem").value;
       const addrs = ethers.Wallet.fromMnemonic(mnemonic)
       document.getElementById("wallet").innerText = "Address: " + addrs.address;
     </script>
